@@ -16,13 +16,13 @@ pipeline {
             }
         }
         stage('Deploy') { 
+            steps {
 			sh '''
 			cd jenkins/target/
 			java -jar jenkins-0.0.1-SNAPSHOT.jar
-            steps {
                echo "Deploy" 
+			   '''
             }
-			'''
         }
     }
 }
